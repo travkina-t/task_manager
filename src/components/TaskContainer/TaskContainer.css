@@ -1,0 +1,35 @@
+.point{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.red{
+    background-color: #EF4444;
+}
+
+.yellow{
+    background-color: #F59E0B;
+}
+
+.green{
+    background-color: #10B981;
+}
+
+.task{
+    width: 200px;
+    min-height: 90px;
+    box-shadow: 4px 2px 4px #0000006f;
+    padding: 10px;
+}
+
+.task__info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.task__priority-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
