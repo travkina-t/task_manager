@@ -20,7 +20,7 @@ const Header = ({setTasks}) => {
             }}>+Add Task</button>
 
             {showForm ? <Modal close={closeModal}>
-                <Form setTasks={setTasks}/>
+                <Form setTasks={setTasks} closeModal={closeModal}/>
             </Modal> : ""}
         </div>
     );

@@ -1,20 +1,22 @@
 import { useState } from "react";
 import { Task, Priority } from "../../TaskContainer/Tasks";
+import { formatDate } from "../../../helpers/dates";
 
-const Form = ({ setTasks }) => {
+const Form = ({ setTasks, closeModal }) => {
     const priorities = ["low", "medium", "high"];
 
     const [newTask, setNewTask] = useState<Task>({
         title: "",
         id: Date.now().toString(),
         priority: "low",
-        createdAt: Date.now(),
+        createdAt: formatDate(new Date()),
         description: "",
         status: "todo",
     });
 
     const addTask = () => {
         setTasks((tasks) => [...tasks, newTask]);
+        closeModal()
     };
     return (
         <form>

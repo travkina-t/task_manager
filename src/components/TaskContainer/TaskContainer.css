@@ -1,29 +1,47 @@
-.point{
+.columns {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.column {
+    width: 350px;
+    border: 1px solid grey;
+}
+.point {
     width: 6px;
     height: 6px;
     border-radius: 50%;
 }
 
-.red{
-    background-color: #EF4444;
+.red {
+    background-color: #ef4444;
 }
 
-.yellow{
-    background-color: #F59E0B;
+.yellow {
+    background-color: #f59e0b;
 }
 
-.green{
-    background-color: #10B981;
+.green {
+    background-color: #10b981;
 }
 
-.task{
+.task.todo {
+}
+.task.in-progress {
+    border: 2px solid gray;
+}
+
+.task.done {
+    opacity: 0.7;
+}
+.task {
     width: 200px;
     min-height: 90px;
     box-shadow: 4px 2px 4px #0000006f;
     padding: 10px;
 }
 
-.task__info{
+.task__info {
     display: flex;
     justify-content: space-between;
 }

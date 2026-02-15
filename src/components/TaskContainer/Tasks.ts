@@ -4,7 +4,7 @@ export interface Task {
     description?: string;
     status: TaskStatus;
     priority: Priority;
-    createdAt: number;
+    createdAt: string;
 }
 export type TaskStatus = "todo" | "in-progress" | "done";
 export type Priority = "low" | "medium" | "high";
