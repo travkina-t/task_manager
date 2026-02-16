@@ -6,12 +6,12 @@ const TaskItem = ({ task, provided }) => {
               ? "point yellow"
               : "point green";
 
-
-    const classStatus = task.status === "todo"
+    const classStatus =
+        task.status === "todo"
             ? "task todo"
             : task.status === "in-progress"
               ? "task in-progress"
-              : "task done";         
+              : "task done";
 
     return (
         <div
@@ -19,7 +19,9 @@ const TaskItem = ({ task, provided }) => {
             ref={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}>
-            <h3 className="task__title">{task.title}</h3>
+            <h3 className="task__title" >
+                {task.title}
+            </h3>
             <div className="task__info">
                 <div className="task__priority-wrapper">
                     <div className={classPriority}></div>

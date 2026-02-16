@@ -7,13 +7,12 @@ const FilteredTasks = ({ tasks, status }) => {
                 .filter((el) => el.status === status)
                 .map((task, index) => {
                     return (
-                        <Draggable draggableId={task.id} index={index}>
+                        <Draggable
+                            key={task.id}
+                            draggableId={String(task.id)}
+                            index={index}>
                             {(provided) => (
-                                <TaskItem
-                                    task={task}
-                                    key={task.id}
-                                    provided={provided}
-                                />
+                                <TaskItem task={task} provided={provided} />
                             )}
                         </Draggable>
                     );

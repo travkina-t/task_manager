@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .columns {
     display: flex;
     justify-content: center;
@@ -6,6 +12,9 @@
 .column {
     width: 350px;
     border: 1px solid grey;
+    height: 100vh;
+    overflow-Y: auto;
+    padding: 10px;
 }
 .point {
     width: 6px;
@@ -28,17 +37,19 @@
 .task.todo {
 }
 .task.in-progress {
-    border: 2px solid gray;
+    background-color: antiquewhite;
 }
 
 .task.done {
     opacity: 0.7;
 }
 .task {
-    width: 200px;
+    width: 100%;
     min-height: 90px;
     box-shadow: 4px 2px 4px #0000006f;
     padding: 10px;
+     user-select: none;
+     overflow: visible;
 }
 
 .task__info {

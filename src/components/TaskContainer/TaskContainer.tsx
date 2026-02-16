@@ -17,19 +17,17 @@ const TaskContainer = ({ tasks, setTasks }) => {
             return;
         }
 
-        // console.log(draggableId, destination.droppableId)
-
-        const changedTasks = tasks.map((task=> {
-            if(task.id === draggableId) {
-                return {...task, status: destination.droppableId}
+        const changedTasks = tasks.map((task) => {
+            if (task.id === draggableId) {
+                return {
+                    ...task,
+                    status: destination.droppableId,
+                };
             }
-            return task
-        }))
+            return task;
+        });
 
-        setTasks(changedTasks)
-        
-
-        // тут меняем состояние
+        setTasks(changedTasks);
     };
 
     return (
@@ -41,7 +39,6 @@ const TaskContainer = ({ tasks, setTasks }) => {
                             {(provided) => (
                                 <div
                                     className={`column ${status}`}
-                                    key={i}
                                     ref={provided.innerRef}
                                     {...provided.droppableProps}>
                                     <FilteredTasks
