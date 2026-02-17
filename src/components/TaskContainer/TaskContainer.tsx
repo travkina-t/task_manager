@@ -1,5 +1,5 @@
 import FilteredTasks from "./FilteredTasks/FilteredTasks";
-import "./TaskContainer.css";
+// import "./TaskContainer.css";
 import { DragDropContext, Droppable, DropResult } from "@hello-pangea/dnd";
 
 const TaskContainer = ({ tasks, setTasks }) => {
