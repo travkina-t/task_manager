@@ -1,8 +1,4 @@
-
-:root{
-    --main-color: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-    --main-font-color: #2c3e50;
-}
+@import "./variables.css";
 
 * {
   margin: 0;
@@ -61,7 +57,7 @@ button {
 }
 
 button:hover {
-  transform: translateY(-2px);
+  /* transform: translateY(-2px); */
   box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
 }
 
@@ -99,14 +95,14 @@ button:hover {
 
 .column.in-progress::before {
   content: "⚡ In Progress";
-  color: #fbbf24;
-  border-bottom-color: #fbbf24;
+  color: var(--in-progress);
+  border-bottom-color: var(--in-progress);
 }
 
 .column.done::before {
   content: "✅ Done";
-  color: #10b981;
-  border-bottom-color: #10b981;
+  color: var(--done);
+  border-bottom-color: var(--done);
 }
 
 /* Карточка задачи */
@@ -127,15 +123,15 @@ button:hover {
 }
 
 .task.todo {
-  border-left-color: #667eea;
+  border-left-color: var(--main-font-color)
 }
 
 .task.in-progress {
-  border-left-color: #fbbf24;
+  border-left-color: var(--in-progress);
 }
 
 .task.done {
-  border-left-color: #10b981;
+  border-left-color: var(--done);
   opacity: 0.8;
 }
 
@@ -144,6 +140,10 @@ button:hover {
   font-weight: 600;
   color: #333;
   margin-bottom: 12px;
+}
+
+.task.done .task__title {
+    text-decoration: line-through;
 }
 
 .task__info {
@@ -165,12 +165,12 @@ button:hover {
 }
 
 .point.green {
-  background: #10b981;
+  background: var(--done);
   box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
 }
 
 .point.yellow {
-  background: #fbbf24;
+  background: var(--in-progress);
   box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.2);
 }
 
@@ -195,17 +195,6 @@ button:hover {
   font-weight: 500;
 }
 
-/* Стили для пустой колонки
-.column > div:empty::before {
-  content: "No tasks yet";
-  display: block;
-  text-align: center;
-  color: #aaa;
-  padding: 40px 20px;
-  font-style: italic;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 12px;
-} */
 
 /* Адаптивность */
 @media (max-width: 900px) {

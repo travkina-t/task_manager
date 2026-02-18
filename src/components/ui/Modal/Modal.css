@@ -1,4 +1,6 @@
-/* Модальное окно */
+@import "../../../variables.css";
+
+
 .modal {
   position: fixed;
   top: 0;
@@ -24,14 +26,14 @@
   overflow-y: auto;
   position: relative;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  animation: slideUp 0.3s ease;
+  /* animation: slideUp 0.3s ease; */
 }
 
 /* Кнопка закрытия (крестик) */
-.modal__content > button {
+.modal__button-close {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 5px;
+  right: 5px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -49,17 +51,16 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.modal__content > button:hover {
+.modal__button-close:hover {
   background: #fee2e2;
   color: #ef4444;
-  transform: rotate(90deg);
   box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
 }
 
-/* Контент внутри модалки */
+/* Контент внутри модалки
 .modal__content > *:not(button) {
   margin-top: 10px;
-}
+} */
 
 /* Если внутри модалки форма */
 .modal__content form {
@@ -90,78 +91,17 @@
   box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
 }
 
-.modal__content textarea {
-  min-height: 100px;
-  resize: vertical;
-}
 
-.modal__content label {
-  font-size: 14px;
-  font-weight: 500;
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 5px;
-  display: block;
-}
 
-.modal__content h2 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 20px;
-  padding-right: 40px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Кнопки в модалке */
-.modal__content button[type="submit"],
-.modal__content button[type="button"] {
-  padding: 14px;
-  border: none;
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s;
-  margin-top: 10px;
-  width: 100%;
-}
 
 .modal__content button[type="submit"] {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--main-color);
   color: white;
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
 .modal__content button[type="submit"]:hover {
-  transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
-}
-
-.modal__content button[type="button"] {
-  background: #f8f9fa;
-  color: #666;
-  border: 2px solid #f0f0f0;
-}
-
-.modal__content button[type="button"]:hover {
-  background: #f0f0f0;
-  color: #333;
-}
-
-/* Группа кнопок рядом */
-.modal__button-group {
-  display: flex;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.modal__button-group button {
-  flex: 1;
 }
 
 /* Анимации */
@@ -192,8 +132,7 @@
 }
 
 .modal__content::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 4px;
+  background: var(--main-color);
 }
 
 /* Адаптивность */

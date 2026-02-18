@@ -8,7 +8,7 @@ const Modal = ({ children, close }) => {
                 onClick={(event) => {
                     event.stopPropagation();
                 }}>
-                <button onClick={close}> &times; </button>
+                <button onClick={close} className="modal__button-close"> &times; </button>
                 {children}
             </div>
         </div>

@@ -5,6 +5,7 @@ const FilteredTasks = ({ tasks, status }) => {
         <div>
             {tasks
                 .filter((el) => el.status === status)
+                // .sort((a, b) => a.order - b.order)
                 .map((task, index) => {
                     return (
                         <Draggable
